@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Detail - NoAgent Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>Property Detail</h1>
+    </header>
+    <main>
+        <section id="media">
+            <div class="video-placeholder">3D Video Preview</div>
+            <button onclick="voiceAsk()">Ask via Voice</button>
+        </section>
+        <section id="tabs">
+            <button onclick="showTab('suburb')">Suburb Data</button>
+            <button onclick="showTab('roi')">ROI Simulation</button>
+            <button onclick="showTab('renovation')">Renovation Suggestions</button>
+            <div id="tabContent" class="tab-content">Select a tab to view info.</div>
+        </section>
+        <button id="messageSeller">Message Seller</button>
+    </main>
+    <script src="data.js"></script>
+    <script src="property.js"></script>
+</body>
+</html>

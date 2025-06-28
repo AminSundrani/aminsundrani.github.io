@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Upload - NoAgent Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>Seller Upload</h1>
+    </header>
+    <main>
+        <form id="uploadForm">
+            <label>Property Video: <input type="file" id="videoInput"></label>
+            <label>Address: <input type="text" id="addressInput"></label>
+            <label>Property Size (sq ft): <input type="number" id="sizeInput"></label>
+            <label>Features: <textarea id="featuresInput"></textarea></label>
+            <button type="button" onclick="generateDescription()">Generate Description</button>
+        </form>
+        <section id="description">
+            <h2>AI Description</h2>
+            <div id="descriptionOutput">Fill in details and click Generate.</div>
+        </section>
+        <section id="priceSuggest">
+            <h2>Price Suggestion</h2>
+            <div id="priceOutput">-</div>
+        </section>
+    </main>
+    <script src="seller.js"></script>
+</body>
+</html>
