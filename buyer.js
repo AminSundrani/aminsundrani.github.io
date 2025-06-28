@@ -1,7 +1,13 @@
 function createCard(property) {
   const card = document.createElement('div');
   card.className = 'property-card';
-  card.innerHTML = `<h3>${property.title}</h3><p>$${property.price.toLocaleString()}</p><p>${property.location}</p>`;
+  card.innerHTML = `
+    <a href="property.html?id=${property.id}">
+      <img src="${property.image}" alt="${property.title}" class="property-img">
+      <h3>${property.title}</h3>
+      <p class="price">$${property.price.toLocaleString()}</p>
+      <p class="location">${property.location}</p>
+    </a>`;
   return card;
 }
 

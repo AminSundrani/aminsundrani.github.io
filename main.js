@@ -8,7 +8,11 @@ function renderFeatured() {
   properties.slice(0, 3).forEach((p) => {
     const card = document.createElement('div');
     card.className = 'property-card';
-    card.innerHTML = `<h3>${p.title}</h3><p>$${p.price.toLocaleString()}</p><p>${p.location}</p>`;
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.title}" class="property-img">
+      <h3>${p.title}</h3>
+      <p class="price">$${p.price.toLocaleString()}</p>
+      <p class="location">${p.location}</p>`;
     container.appendChild(card);
   });
 }
