@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard - NoAgent Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>Buyer Dashboard</h1>
+    </header>
+    <main>
+        <section id="filters">
+            <h2>Smart Filters</h2>
+            <label>Price: <input type="range" id="priceRange" min="100000" max="1000000" step="50000"></label>
+            <label>Location: <input type="text" id="locationFilter" placeholder="Suburb"></label>
+            <label><input type="checkbox" id="verifiedFilter"> Verified Sellers Only</label>
+            <button onclick="applyFilters()">Apply</button>
+        </section>
+        <section id="recommendations">
+            <h2>Recommended Properties</h2>
+            <div id="recommendationList" class="property-list"></div>
+        </section>
+        <section id="agents">
+            <h2>AI Agents</h2>
+            <div class="agent-icons">
+                <div class="agent" onclick="showAgent('lifestyle')">Lifestyle</div>
+                <div class="agent" onclick="showAgent('finance')">Finance</div>
+                <div class="agent" onclick="showAgent('renovation')">Renovation</div>
+                <div class="agent" onclick="showAgent('area')">Area Insights</div>
+            </div>
+            <div id="agentPanel" class="agent-panel">Select an agent to view info.</div>
+        </section>
+    </main>
+    <script src="data.js"></script>
+    <script src="buyer.js"></script>
+</body>
+</html>
+
